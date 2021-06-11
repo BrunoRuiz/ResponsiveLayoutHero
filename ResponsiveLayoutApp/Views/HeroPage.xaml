@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="ResponsiveLayoutApp.Views.HeroPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:local="clr-namespace:ResponsiveLayoutApp.Constants"
+    x:Name="viewHeroPage"
+    Title="{x:Static local:ResourceUiConstants.HeroiSelecionado}"
+    ios:Page.UseSafeArea="True"
+    BackgroundColor="{AppThemeBinding Light={StaticResource LightAccentPageBackgoundColor},
+                                      Dark={StaticResource DarkPageBackgroundColor}}"
+    Visual="Material">
+
+    <ContentPage.Content>
+
+        <StackLayout
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand">
+
+            <WebView
+                HorizontalOptions="FillAndExpand"
+                Source="{Binding UriHero}"
+                VerticalOptions="FillAndExpand" />
+
+            <Button
+                Margin="{StaticResource MainWrapperPadding}"
+                BackgroundColor="{AppThemeBinding Light={StaticResource LightSecondaryTextColor},
+                                                  Dark={StaticResource DarkPrimaryTextColor}}"
+                Command="{Binding Source={x:Reference viewHeroPage}, Path=BindingContext.AdicionarHeroCommand}"
+                Text="{x:Static local:ResourceUiConstants.DescricaoButtonAddHeroisFavoritos}"
+                TextColor="{AppThemeBinding Light={StaticResource LightAccentPageBackgoundColor},
+                                            Dark={StaticResource DarkHomePageBackgroundColor}}"
+                VerticalOptions="End"
+                Visual="Material" />
+        </StackLayout>
+
+
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application
+    x:Class="ResponsiveLayoutApp.App"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:nav="clr-namespace:Connect.Services.Custom.PageNavigation">
+
+    <Application.Resources>
+
+        <ResourceDictionary>
+
+            <Style
+                x:Key="PhoneGridStyle"
+                TargetType="Grid">
+                <Setter Property="Padding" Value="10" />
+            </Style>
+
+            <Style
+                x:Key="TabletGridStyle"
+                TargetType="Grid">
+                <Setter Property="Padding" Value="100,10" />
+            </Style>
+
+
+            <!--  RESPONSIVE COMMON  -->
+            <OnIdiom
+                x:Key="MainWrapperPadding"
+                x:TypeArguments="Thickness"
+                Phone="10"
+                Tablet="200,10" />
+            <!--  END RESPONSIVE COMMON  -->
+
+            <!--  RESPONSIVE HELPERS  -->
+            <OnIdiom
+                x:Key="TabletVisible"
+                x:TypeArguments="x:Boolean"
+                Phone="False"
+                Tablet="True" />
+
+            <OnIdiom
+                x:Key="PhoneVisible"
+                x:TypeArguments="x:Boolean"
+                Phone="True"
+                Tablet="False" />
+
+            <OnPlatform
+                x:Key="AndroidVisible"
+                x:TypeArguments="x:Boolean"
+                Android="True"
+                iOS="False" />
+
+            <OnPlatform
+                x:Key="iOSVisible"
+                x:TypeArguments="x:Boolean"
+                Android="False"
+                iOS="True" />
+            <!--  END RESPONSIVE HELPERS  -->
+
+        </ResourceDictionary>
+
+
+        <x:Double x:Key="BaseFontSize">
+            16
+        </x:Double>
+        <x:Double x:Key="BaseButtonHeight">
+            44
+        </x:Double>
+        <x:Double x:Key="BaseButtonBorderRadius">
+            22
+        </x:Double>
+        <x:Double x:Key="MainMenuLabelFontsize">
+            18
+        </x:Double>
+        <x:Double x:Key="MainMenuIconFontsize">
+            20
+        </x:Double>
+        <x:Double x:Key="MainMenuHeaderFontsize">
+            18
+        </x:Double>
+        <x:Double x:Key="MainMenuLabelTranslationX">
+            10
+        </x:Double>
+        <x:Double x:Key="MainMenuChevronRightFontsize">
+            24
+        </x:Double>
+        <x:Double x:Key="MainMenuIconWidthRequest">
+            22
+        </x:Double>
+
+
+        <Color x:Key="TransparentColor">
+            Transparent
+        </Color>
+
+        <!--  Light colors  -->
+        <Color x:Key="LightHomePageBackgroundColor">
+            #EAECEC
+        </Color>
+        <Color x:Key="LightPageBackgroundColor">
+            White
+        </Color>
+        <Color x:Key="LightNavigationBarColor">
+            WhiteSmoke
+        </Color>
+        <Color x:Key="LightPrimaryColor">
+            WhiteSmoke
+        </Color>
+        <Color x:Key="LightSecondaryColor">
+            Black
+        </Color>
+        <Color x:Key="LightPrimaryTextColor">
+            Black
+        </Color>
+        <Color x:Key="LightSecondaryTextColor">
+            White
+        </Color>
+        <Color x:Key="LightTertiaryTextColor">
+            Gray
+        </Color>
+
+        <Color x:Key="LightTesteTextColor">
+            #F5F5F5
+        </Color>
+
+        <Color x:Key="LightAccentPageBackgoundColor">
+            #1976D2
+        </Color>
+
+        <Color x:Key="LightPrimaryLinkTextColor">
+            Blue
+        </Color>
+
+        <!--  Dark colors  -->
+        <Color x:Key="DarkHomePageBackgroundColor">
+            #505050
+        </Color>
+        <Color x:Key="DarkPageBackgroundColor">
+            #383838
+        </Color>
+        <Color x:Key="DarkNavigationBarColor">
+            #1A191A
+        </Color>
+        <Color x:Key="DarkPrimaryColor">
+            #1A191A
+        </Color>
+        <Color x:Key="DarkSecondaryColor">
+            White
+        </Color>
+        <Color x:Key="DarkPrimaryTextColor">
+            White
+        </Color>
+        <Color x:Key="DarkSecondaryTextColor">
+            White
+        </Color>
+        <Color x:Key="DarkTertiaryTextColor">
+            WhiteSmoke
+        </Color>
+
+        <Color x:Key="DarkPrimaryLinkTextColor">
+            #87AACB
+        </Color>
+
+        <Style TargetType="NavigationPage">
+            <Setter Property="BarBackgroundColor" Value="{AppThemeBinding Light={StaticResource LightNavigationBarColor}, Dark={StaticResource DarkNavigationBarColor}}" />
+            <Setter Property="BarTextColor" Value="{AppThemeBinding Light={StaticResource LightSecondaryColor}, Dark={StaticResource DarkSecondaryColor}}" />
+        </Style>
+
+        <Style TargetType="nav:CustomNavigationPage">
+            <Setter Property="BarBackgroundColor" Value="{AppThemeBinding Light={StaticResource LightAccentPageBackgoundColor}, Dark={StaticResource DarkPageBackgroundColor}}" />
+            <Setter Property="BarTextColor" Value="White" />
+        </Style>
+
+        <Style
+            x:Key="ButtonStyle"
+            TargetType="Button">
+            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource LightPrimaryColor}, Dark={StaticResource DarkPrimaryColor}}" />
+            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource LightSecondaryColor}, Dark={StaticResource DarkSecondaryColor}}" />
+            <Setter Property="HeightRequest" Value="45" />
+            <Setter Property="WidthRequest" Value="190" />
+            <Setter Property="CornerRadius" Value="18" />
+        </Style>
+
+        <Style
+            x:Key="LargeLabelStyle"
+            TargetType="Label">
+            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource LightSecondaryTextColor}, Dark={StaticResource DarkSecondaryTextColor}}" />
+            <Setter Property="FontSize" Value="30" />
+        </Style>
+
+        <Style
+            x:Key="MediumLabelStyle"
+            TargetType="Label">
+            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource LightPrimaryTextColor}, Dark={StaticResource DarkPrimaryTextColor}}" />
+            <Setter Property="FontSize" Value="25" />
+        </Style>
+
+        <Style
+            x:Key="SmallLabelStyle"
+            TargetType="Label">
+            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource LightTertiaryTextColor}, Dark={StaticResource DarkTertiaryTextColor}}" />
+            <Setter Property="FontSize" Value="15" />
+        </Style>
+
+        <Style
+            ApplyToDerivedTypes="true"
+            TargetType="Button">
+            <Setter Property="FontSize" Value="{StaticResource BaseFontSize}" />
+            <Setter Property="BorderRadius" Value="22" />
+            <Setter Property="BorderWidth" Value="0" />
+            <Setter Property="BorderColor" Value="Transparent" />
+            <Setter Property="HeightRequest" Value="{StaticResource BaseButtonHeight}" />
+
+
+        </Style>
+
+    </Application.Resources>
+</Application>

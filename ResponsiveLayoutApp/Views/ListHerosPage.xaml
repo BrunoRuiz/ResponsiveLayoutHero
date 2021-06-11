@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="ResponsiveLayoutApp.Views.ListHerosPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:local="clr-namespace:ResponsiveLayoutApp.Constants"
+    x:Name="viewListHerosPage"
+    Title="{x:Static local:ResourceUiConstants.HeroisMarvel}"
+    ios:Page.UseSafeArea="True"
+    BackgroundColor="{AppThemeBinding Light={StaticResource TransparentColor},
+                                      Dark={StaticResource DarkPageBackgroundColor}}"
+    NavigationPage.HasNavigationBar="True"
+    Visual="Material">
+
+    <ContentPage.Content>
+
+        <FlexLayout
+            Padding="0"
+            Direction="Row"
+            JustifyContent="Center">
+
+
+            <StackLayout
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand">
+
+                <ListView
+                    BackgroundColor="{AppThemeBinding Light={StaticResource TransparentColor},
+                                                      Dark={StaticResource DarkPageBackgroundColor}}"
+                    CachingStrategy="RecycleElement"
+                    HasUnevenRows="True"
+                    Header=""
+                    HorizontalOptions="FillAndExpand"
+                    ItemsSource="{Binding Heros}"
+                    SelectedItem="{Binding HeroSelected}"
+                    SeparatorVisibility="None"
+                    VerticalOptions="FillAndExpand"
+                    Visual="Material">
+
+                    <ListView.HeaderTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Label
+                                    Padding="10"
+                                    FontSize="Micro"
+                                    HorizontalOptions="StartAndExpand"
+                                    Text="{OnPlatform Android={x:Static local:ResourceUiConstants.SelecioneUmHeroiParaDetalhesAndroid},
+                                                      iOS={x:Static local:ResourceUiConstants.SelecioneUmHeroiParaDetalhesiOS}}"
+                                    TextColor="{AppThemeBinding Light={StaticResource LightPrimaryTextColor},
+                                                                Dark={StaticResource DarkPrimaryTextColor}}" />
+                            </Grid>
+                        </DataTemplate>
+                    </ListView.HeaderTemplate>
+
+
+                    <ListView.ItemTemplate>
+
+                        <DataTemplate>
+
+                            <ViewCell>
+
+                                <ViewCell.ContextActions>
+                                    <MenuItem
+                                        Command="{Binding Source={x:Reference viewListHerosPage}, Path=BindingContext.NavigateToDetalheCommand}"
+                                        CommandParameter="{Binding .}"
+                                        Text="{x:Static local:ResourceUiConstants.DescricaoLabelDetalhes}" />
+                                </ViewCell.ContextActions>
+
+                                <Grid
+                                    ColumnSpacing="0"
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="FillAndExpand">
+
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <!--  AVATAR  -->
+                                    <StackLayout
+                                        Grid.Row="0"
+                                        Grid.Column="0"
+                                        Padding="10">
+
+                                        <Frame
+                                            Padding="0"
+                                            CornerRadius="30"
+                                            HasShadow="False"
+                                            HeightRequest="60"
+                                            HorizontalOptions="Center"
+                                            IsClippedToBounds="True"
+                                            WidthRequest="60">
+
+                                            <Image
+                                                Aspect="AspectFill"
+                                                Source="{Binding Thumbnail.PathImageSource}" />
+
+                                        </Frame>
+
+
+
+                                    </StackLayout>
+
+                                    <!--  HERONAME  -->
+                                    <Label
+                                        Grid.Row="0"
+                                        Grid.Column="1"
+                                        FontSize="{OnPlatform Android='19',
+                                                              iOS='16'}"
+                                        HorizontalOptions="StartAndExpand"
+                                        Text="{Binding Name}"
+                                        VerticalOptions="Center" />
+
+                                    <!--  SEPARAÇÃO  -->
+                                    <BoxView
+                                        Grid.Row="0"
+                                        Grid.Column="0"
+                                        Grid.ColumnSpan="2"
+                                        BackgroundColor="Black"
+                                        HeightRequest="1"
+                                        HorizontalOptions="FillAndExpand"
+                                        VerticalOptions="End" />
+
+                                </Grid>
+
+                            </ViewCell>
+
+                        </DataTemplate>
+
+                    </ListView.ItemTemplate>
+
+                </ListView>
+
+            </StackLayout>
+
+        </FlexLayout>
+
+    </ContentPage.Content>
+
+</ContentPage>

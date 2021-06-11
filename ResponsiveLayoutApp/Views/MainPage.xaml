@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ResponsiveLayoutApp.Views.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:fonts="clr-namespace:ResponsiveLayoutApp.Fonts.Icon"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:local="clr-namespace:ResponsiveLayoutApp.Constants"
+    x:Name="viewMainPage"
+    ios:Page.UseSafeArea="True"
+    BackgroundColor="{AppThemeBinding Light={StaticResource LightAccentPageBackgoundColor},
+                                      Dark={StaticResource DarkPageBackgroundColor}}"
+    NavigationPage.HasNavigationBar="False"
+    Visual="Material">
+
+    <FlexLayout
+        Padding="0"
+        BackgroundColor="{AppThemeBinding Light={StaticResource LightHomePageBackgroundColor},
+                                          Dark={StaticResource DarkPageBackgroundColor}}"
+        Direction="Row">
+
+
+        <StackLayout
+            Padding="0"
+            BackgroundColor="{AppThemeBinding Light={StaticResource LightAccentPageBackgoundColor},
+                                              Dark={StaticResource DarkPageBackgroundColor}}"
+            Spacing="0">
+
+            <Grid
+                Padding="0"
+                ColumnSpacing="0"
+                HorizontalOptions="FillAndExpand"
+                RowSpacing="0"
+                VerticalOptions="Start">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <!--  HEADER  -->
+                <StackLayout
+                    Grid.Row="0"
+                    BackgroundColor="{AppThemeBinding Light={StaticResource LightAccentPageBackgoundColor},
+                                                      Dark={StaticResource DarkPageBackgroundColor}}"
+                    HeightRequest="100"
+                    HorizontalOptions="FillAndExpand"
+                    Orientation="Horizontal"
+                    VerticalOptions="Start">
+
+                    <Grid
+                        Margin="0"
+                        Padding="0"
+                        ColumnSpacing="0"
+                        HorizontalOptions="FillAndExpand"
+                        RowSpacing="0"
+                        VerticalOptions="Start">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <StackLayout
+                            Grid.Column="0"
+                            Padding="15,3,0,3"
+                            HorizontalOptions="FillAndExpand"
+                            Spacing="3"
+                            VerticalOptions="CenterAndExpand">
+
+                            <Label
+                                FontSize="Micro"
+                                HorizontalOptions="StartAndExpand"
+                                Text="{x:Static local:ResourceUiConstants.DescricaoLabelCargo}"
+                                TextColor="{AppThemeBinding Light={StaticResource LightSecondaryTextColor},
+                                                            Dark={StaticResource DarkPrimaryTextColor}}" />
+
+                            <Label
+                                FontAttributes="Bold"
+                                FontSize="Subtitle"
+                                LineBreakMode="TailTruncation"
+                                Text="{Binding Usuario.Nome}"
+                                TextColor="{AppThemeBinding Light={StaticResource LightSecondaryTextColor},
+                                                            Dark={StaticResource DarkPrimaryTextColor}}" />
+
+
+
+                            <StackLayout
+                                Padding="0"
+                                Orientation="Horizontal">
+
+                                <Label
+                                    FontFamily="FontAwesomeBold"
+                                    FontSize="Subtitle"
+                                    Text="{x:Static fonts:FontAwesome.SunO}"
+                                    TextColor="{AppThemeBinding Light={StaticResource LightSecondaryTextColor},
+                                                                Dark={StaticResource DarkPrimaryTextColor}}"
+                                    VerticalTextAlignment="Center" />
+
+                                <Label
+                                    Padding="0,5"
+                                    FontSize="Micro"
+                                    HorizontalOptions="StartAndExpand"
+                                    Text="{Binding Usuario.DataNascimentoExtenso}"
+                                    TextColor="{AppThemeBinding Light={StaticResource LightSecondaryTextColor},
+                                                                Dark={StaticResource DarkPrimaryTextColor}}"
+                                    VerticalTextAlignment="Center" />
+
+                            </StackLayout>
+
+                        </StackLayout>
+
+                        <StackLayout
+                            Grid.Column="1"
+                            Padding="5,3,15,3"
+                            HorizontalOptions="EndAndExpand"
+                            Orientation="Horizontal"
+                            VerticalOptions="CenterAndExpand">
+
+                            <StackLayout>
+
+                                <Frame
+                                    Padding="0"
+                                    CornerRadius="30"
+                                    HasShadow="False"
+                                    HeightRequest="60"
+                                    HorizontalOptions="Center"
+                                    IsClippedToBounds="True"
+                                    WidthRequest="60">
+
+                                    <Image
+                                        Aspect="AspectFill"
+                                        Source="{Binding Usuario.UriAvatar}" />
+
+                                </Frame>
+
+                                <Label
+                                    Padding="0"
+                                    FontAttributes="Bold"
+                                    FontSize="Micro"
+                                    HorizontalOptions="Center"
+                                    Text="{Binding Usuario.Idade, StringFormat='{0} Anos'}"
+                                    TextColor="{AppThemeBinding Light={StaticResource LightSecondaryTextColor},
+                                                                Dark={StaticResource DarkPrimaryTextColor}}" />
+
+                            </StackLayout>
+
+
+
+                        </StackLayout>
+
+
+                    </Grid>
+
+                </StackLayout>
+
+                <!--  BODY  -->
+                <StackLayout
+                    Grid.Row="1"
+                    Margin="0"
+                    Padding="{StaticResource MainWrapperPadding}"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
+
+                    <ListView
+                        BackgroundColor="{AppThemeBinding Light={StaticResource TransparentColor},
+                                                          Dark={StaticResource DarkPageBackgroundColor}}"
+                        CachingStrategy="RecycleElement"
+                        HasUnevenRows="True"
+                        Header=""
+                        ItemsSource="{Binding Heros}"
+                        SeparatorVisibility="None"
+                        VerticalOptions="FillAndExpand"
+                        Visual="Material">
+
+                        <ListView.HeaderTemplate>
+                            <DataTemplate>
+                                <Grid>
+
+                                    <StackLayout>
+                                        <Label
+                                            Padding="0,0"
+                                            FontSize="Title"
+                                            HorizontalOptions="CenterAndExpand"
+                                            Text="{x:Static local:ResourceUiConstants.MeusHeroisFavoritos}"
+                                            TextColor="{AppThemeBinding Light={StaticResource LightPrimaryTextColor},
+                                                                        Dark={StaticResource DarkPrimaryTextColor}}" />
+
+                                        <Label
+                                            Padding="0,10"
+                                            FontSize="Micro"
+                                            HorizontalOptions="CenterAndExpand"
+                                            Text="{OnPlatform Android={x:Static local:ResourceUiConstants.DescricaoLabelExcluirFavoritoAndroid},
+                                                              iOS={x:Static local:ResourceUiConstants.DescricaoLabelExcluirFavoritoiOS}}"
+                                            TextColor="{AppThemeBinding Light={StaticResource LightPrimaryTextColor},
+                                                                        Dark={StaticResource DarkPrimaryTextColor}}" />
+                                    </StackLayout>
+
+
+                                </Grid>
+                            </DataTemplate>
+                        </ListView.HeaderTemplate>
+
+
+                        <ListView.ItemTemplate>
+
+                            <DataTemplate>
+
+                                <ViewCell>
+
+                                    <ViewCell.ContextActions>
+
+                                        <MenuItem
+                                            Command="{Binding Source={x:Reference viewMainPage}, Path=BindingContext.RemoveHeroiFavoriteCommand}"
+                                            CommandParameter="{Binding .}"
+                                            IsDestructive="True"
+                                            Text="{x:Static local:ResourceUiConstants.DescricaoLabelRemover}" />
+                                    </ViewCell.ContextActions>
+
+                                    <Grid
+                                        ColumnSpacing="0"
+                                        HorizontalOptions="FillAndExpand"
+                                        VerticalOptions="FillAndExpand">
+
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                        </Grid.RowDefinitions>
+
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <!--  AVATAR  -->
+                                        <StackLayout
+                                            Grid.Row="0"
+                                            Grid.Column="0"
+                                            Padding="10">
+
+                                            <Frame
+                                                Padding="0"
+                                                CornerRadius="30"
+                                                HasShadow="False"
+                                                HeightRequest="60"
+                                                HorizontalOptions="Center"
+                                                IsClippedToBounds="True"
+                                                WidthRequest="60">
+
+                                                <Image
+                                                    Aspect="AspectFill"
+                                                    Source="{Binding Thumbnail.PathImageSource}" />
+
+                                            </Frame>
+
+                                        </StackLayout>
+
+                                        <!--  HERONAME  -->
+                                        <Label
+                                            Grid.Row="0"
+                                            Grid.Column="1"
+                                            FontSize="{OnPlatform Android='19',
+                                                                  iOS='16'}"
+                                            HorizontalOptions="StartAndExpand"
+                                            Text="{Binding Name}"
+                                            VerticalOptions="Center" />
+
+                                        <!--  SEPARAÇÃO  -->
+                                        <BoxView
+                                            Grid.Row="0"
+                                            Grid.Column="0"
+                                            Grid.ColumnSpan="2"
+                                            BackgroundColor="Black"
+                                            HeightRequest="1"
+                                            HorizontalOptions="FillAndExpand"
+                                            VerticalOptions="End" />
+
+                                    </Grid>
+
+                                </ViewCell>
+
+                            </DataTemplate>
+
+                        </ListView.ItemTemplate>
+
+                    </ListView>
+
+                </StackLayout>
+
+            </Grid>
+
+            <!--  FOOTER  -->
+            <StackLayout
+                Padding="{StaticResource MainWrapperPadding}"
+                BackgroundColor="{AppThemeBinding Light={StaticResource LightAccentPageBackgoundColor},
+                                                  Dark={StaticResource DarkHomePageBackgroundColor}}"
+                HorizontalOptions="FillAndExpand"
+                Spacing="0"
+                VerticalOptions="EndAndExpand">
+
+                <Button
+                    BackgroundColor="{AppThemeBinding Light={StaticResource LightSecondaryTextColor},
+                                                      Dark={StaticResource DarkPrimaryTextColor}}"
+                    Command="{Binding Source={x:Reference viewMainPage}, Path=BindingContext.NavigateToCommand}"
+                    CommandParameter="{Binding NavigationToListHerosPage}"
+                    HorizontalOptions="FillAndExpand"
+                    Text="{x:Static local:ResourceUiConstants.DescricaoButtonAddHerois}"
+                    TextColor="{AppThemeBinding Light={StaticResource LightAccentPageBackgoundColor},
+                                                Dark={StaticResource DarkHomePageBackgroundColor}}"
+                    VerticalOptions="FillAndExpand" />
+
+            </StackLayout>
+
+
+        </StackLayout>
+
+
+    </FlexLayout>
+
+</ContentPage>

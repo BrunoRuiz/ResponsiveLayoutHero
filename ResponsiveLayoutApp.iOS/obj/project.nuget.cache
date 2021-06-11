@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "dgSpecHash": "GzOyZqrv/Q8dQfjSu31uFuhoAKB4pZcH9wd9Qr/9BoSb7B97Z4hSyQ7BBHVIme2NjSRztRpzglwJUOk78dxQ/w==",
+  "success": true,
+  "projectFilePath": "/Users/brunoruiz/Projects/Xamarin/Bruno/Testes/ACTDigital/ResponsiveLayoutHero/ResponsiveLayoutApp.iOS/ResponsiveLayoutApp.iOS.csproj",
+  "expectedPackageFiles": [
+    "/Users/brunoruiz/.nuget/packages/fody/6.5.1/fody.6.5.1.nupkg.sha512",
+    "/Users/brunoruiz/.nuget/packages/microsoft.bcl.asyncinterfaces/5.0.0/microsoft.bcl.asyncinterfaces.5.0.0.nupkg.sha512",
+    "/Users/brunoruiz/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
+    "/Users/brunoruiz/.nuget/packages/propertychanged.fody/3.4.0/propertychanged.fody.3.4.0.nupkg.sha512",
+    "/Users/brunoruiz/.nuget/packages/refit/6.0.38/refit.6.0.38.nupkg.sha512",
+    "/Users/brunoruiz/.nuget/packages/system.buffers/4.5.1/system.buffers.4.5.1.nupkg.sha512",
+    "/Users/brunoruiz/.nuget/packages/system.net.http.json/5.0.0/system.net.http.json.5.0.0.nupkg.sha512",
+    "/Users/brunoruiz/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
+    "/Users/brunoruiz/.nuget/packages/system.runtime.compilerservices.unsafe/5.0.0/system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512",
+    "/Users/brunoruiz/.nuget/packages/system.text.encodings.web/5.0.0/system.text.encodings.web.5.0.0.nupkg.sha512",
+    "/Users/brunoruiz/.nuget/packages/system.text.json/5.0.1/system.text.json.5.0.1.nupkg.sha512",
+    "/Users/brunoruiz/.nuget/packages/xamarin.essentials/1.6.1/xamarin.essentials.1.6.1.nupkg.sha512",
+    "/Users/brunoruiz/.nuget/packages/xamarin.forms/5.0.0.2012/xamarin.forms.5.0.0.2012.nupkg.sha512",
+    "/Users/brunoruiz/.nuget/packages/xamarin.testcloud.agent/0.22.2/xamarin.testcloud.agent.0.22.2.nupkg.sha512"
+  ],
+  "logs": []
+}

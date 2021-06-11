@@ -1,0 +1,9 @@
+/Users/brunoruiz/Projects/Xamarin/Bruno/Testes/ACTDigital/ResponsiveLayoutXamarin/ResponsiveLayoutApp/ResponsiveLayoutApp.Dto/obj/Debug/netstandard2.1/ResponsiveLayoutAppDto.csprojAssemblyReference.cache
+/Users/brunoruiz/Projects/Xamarin/Bruno/Testes/ACTDigital/ResponsiveLayoutXamarin/ResponsiveLayoutApp/ResponsiveLayoutApp.Dto/obj/Debug/netstandard2.1/ResponsiveLayoutAppDto.AssemblyInfoInputs.cache
+/Users/brunoruiz/Projects/Xamarin/Bruno/Testes/ACTDigital/ResponsiveLayoutXamarin/ResponsiveLayoutApp/ResponsiveLayoutApp.Dto/obj/Debug/netstandard2.1/ResponsiveLayoutAppDto.AssemblyInfo.cs
+/Users/brunoruiz/Projects/Xamarin/Bruno/Testes/ACTDigital/ResponsiveLayoutXamarin/ResponsiveLayoutApp/ResponsiveLayoutApp.Dto/obj/Debug/netstandard2.1/ResponsiveLayoutAppDto.csproj.CoreCompileInputs.cache
+/Users/brunoruiz/Projects/Xamarin/Bruno/Testes/ACTDigital/ResponsiveLayoutXamarin/ResponsiveLayoutApp/ResponsiveLayoutApp.Dto/bin/Debug/netstandard2.1/ResponsiveLayoutAppDto.deps.json
+/Users/brunoruiz/Projects/Xamarin/Bruno/Testes/ACTDigital/ResponsiveLayoutXamarin/ResponsiveLayoutApp/ResponsiveLayoutApp.Dto/bin/Debug/netstandard2.1/ResponsiveLayoutAppDto.dll
+/Users/brunoruiz/Projects/Xamarin/Bruno/Testes/ACTDigital/ResponsiveLayoutXamarin/ResponsiveLayoutApp/ResponsiveLayoutApp.Dto/bin/Debug/netstandard2.1/ResponsiveLayoutAppDto.pdb
+/Users/brunoruiz/Projects/Xamarin/Bruno/Testes/ACTDigital/ResponsiveLayoutXamarin/ResponsiveLayoutApp/ResponsiveLayoutApp.Dto/obj/Debug/netstandard2.1/ResponsiveLayoutAppDto.dll
+/Users/brunoruiz/Projects/Xamarin/Bruno/Testes/ACTDigital/ResponsiveLayoutXamarin/ResponsiveLayoutApp/ResponsiveLayoutApp.Dto/obj/Debug/netstandard2.1/ResponsiveLayoutAppDto.pdb

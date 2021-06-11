@@ -1,0 +1,10 @@
+/Users/brunoruiz/Projects/Xamarin/Bruno/Testes/ACTDigital/ResponsiveLayoutHero/ResponsiveLayoutApp.UITests/bin/Debug/test-cloud.exe
+/Users/brunoruiz/Projects/Xamarin/Bruno/Testes/ACTDigital/ResponsiveLayoutHero/ResponsiveLayoutApp.UITests/bin/Debug/ResponsiveLayoutApp.UITests.dll
+/Users/brunoruiz/Projects/Xamarin/Bruno/Testes/ACTDigital/ResponsiveLayoutHero/ResponsiveLayoutApp.UITests/bin/Debug/ResponsiveLayoutApp.UITests.pdb
+/Users/brunoruiz/Projects/Xamarin/Bruno/Testes/ACTDigital/ResponsiveLayoutHero/ResponsiveLayoutApp.UITests/bin/Debug/nunit.framework.dll
+/Users/brunoruiz/Projects/Xamarin/Bruno/Testes/ACTDigital/ResponsiveLayoutHero/ResponsiveLayoutApp.UITests/bin/Debug/Xamarin.UITest.dll
+/Users/brunoruiz/Projects/Xamarin/Bruno/Testes/ACTDigital/ResponsiveLayoutHero/ResponsiveLayoutApp.UITests/obj/Debug/ResponsiveLayoutApp.UITests.csprojAssemblyReference.cache
+/Users/brunoruiz/Projects/Xamarin/Bruno/Testes/ACTDigital/ResponsiveLayoutHero/ResponsiveLayoutApp.UITests/obj/Debug/ResponsiveLayoutApp.UITests.csproj.CoreCompileInputs.cache
+/Users/brunoruiz/Projects/Xamarin/Bruno/Testes/ACTDigital/ResponsiveLayoutHero/ResponsiveLayoutApp.UITests/obj/Debug/ResponsiveLayoutApp.UITests.csproj.CopyComplete
+/Users/brunoruiz/Projects/Xamarin/Bruno/Testes/ACTDigital/ResponsiveLayoutHero/ResponsiveLayoutApp.UITests/obj/Debug/ResponsiveLayoutApp.UITests.dll
+/Users/brunoruiz/Projects/Xamarin/Bruno/Testes/ACTDigital/ResponsiveLayoutHero/ResponsiveLayoutApp.UITests/obj/Debug/ResponsiveLayoutApp.UITests.pdb

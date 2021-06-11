@@ -1,0 +1,31 @@
+﻿<Properties StartupConfiguration="MultipleProjects">
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ResponsiveLayoutApp" expanded="True" selected="True">
+            <Node name="Aplicativo" expanded="True">
+              <Node name="ResponsiveLayoutApp" expanded="True" />
+            </Node>
+            <Node name="Shared" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Aplicativo.ResponsiveLayoutApp.Android PreferredExecutionTarget="Android.Pixel_4_API_30" />
+  <MonoDevelop.Ide.ItemProperties.Aplicativo.ResponsiveLayoutApp.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.D30EC160-1599-41AF-BE81-A79222F1EE32" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations>
+    <MultiItemSolutionRunConfiguration Id="MultipleProjects" Name="MultipleProjects">
+      <Items>
+        <StartupItem ItemId="{1E4C4F36-68B6-4D91-9648-51A2D3180A99}" ItemName="ResponsiveLayoutApp.Android" ConfigurationId="Default" />
+        <StartupItem ItemId="{68C17D4B-D448-43BB-BAEC-8835620A5116}" ItemName="ResponsiveLayoutApp.iOS" ConfigurationId="Default" />
+      </Items>
+    </MultiItemSolutionRunConfiguration>
+  </MultiItemStartupConfigurations>
+</Properties>

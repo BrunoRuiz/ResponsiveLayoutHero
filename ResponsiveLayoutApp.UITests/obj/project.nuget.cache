@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "5If74ZkzX/f/eazXUM2o7IThqFEe7ipEDXe0wAd8+ndyACqjnhymbQAACAcxOIKq6jpkvnROmaCcW1phLRo6eA==",
+  "success": true,
+  "projectFilePath": "/Users/brunoruiz/Projects/Xamarin/Bruno/Testes/ACTDigital/ResponsiveLayoutHero/ResponsiveLayoutApp.UITests/ResponsiveLayoutApp.UITests.csproj",
+  "expectedPackageFiles": [
+    "/Users/brunoruiz/.nuget/packages/nunit/3.13.2/nunit.3.13.2.nupkg.sha512",
+    "/Users/brunoruiz/.nuget/packages/xamarin.uitest/3.0.19/xamarin.uitest.3.0.19.nupkg.sha512"
+  ],
+  "logs": []
+}
