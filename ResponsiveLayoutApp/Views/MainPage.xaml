@@ -163,7 +163,7 @@
                     VerticalOptions="FillAndExpand">
 
                     <ListView
-                        BackgroundColor="{AppThemeBinding Light={StaticResource TransparentColor},
+                        BackgroundColor="{AppThemeBinding Light={StaticResource LightHomePageBackgroundColor},
                                                           Dark={StaticResource DarkPageBackgroundColor}}"
                         CachingStrategy="RecycleElement"
                         HasUnevenRows="True"
@@ -179,7 +179,7 @@
 
                                     <StackLayout>
                                         <Label
-                                            Padding="0,0"
+                                            Padding="0,20"
                                             FontSize="Title"
                                             HorizontalOptions="CenterAndExpand"
                                             Text="{x:Static local:ResourceUiConstants.MeusHeroisFavoritos}"
